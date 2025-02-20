@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import React, { createContext, useContext, useState, useEffect } from "react";
 import { Token } from "@/types";
@@ -47,7 +47,9 @@ export const TokenProvider: React.FC<TokenProviderProps> = ({ children }) => {
       }
 
       const data = await response.json();
-      let tokenList: Token[] = Array.isArray(data) ? data : Object.values(data);
+      const tokenList: Token[] = Array.isArray(data)
+        ? data
+        : Object.values(data);
 
       setTokens(tokenList);
       setHasFetched(true);
