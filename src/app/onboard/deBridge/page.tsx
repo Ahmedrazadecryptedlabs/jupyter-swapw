@@ -59,7 +59,7 @@ export default function DeBridgePage() {
         isHideLogo: false,
       });
     } catch (error) {
-      console.error("Error initializing widget:", error);
+      console.log("Error initializing widget:", error);
     }
   };
 

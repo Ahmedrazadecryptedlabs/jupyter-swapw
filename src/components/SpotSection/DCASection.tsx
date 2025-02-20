@@ -41,7 +41,7 @@ const DCAComponent: React.FC<DCAComponentProps> = ({
   loadingSwap,
 }) => {
   const handleUseMarketClick = () => {
-    console.log("Use Market clicked");
+    // console.log("Use Market clicked");
   };
 
 const dcaDetails = [

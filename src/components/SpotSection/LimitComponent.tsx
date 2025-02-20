@@ -1,7 +1,6 @@
 import React from "react";
 import TokenInputSection from "../ui/TokenInputSection";
 import SwapButton from "@/components/ui/SwapButton";
-import JupiterZToggle from "@/components/ui/jupiterztoggle";
 
 import RateExpirySection from "../ui/RateExpirySection";
 import LimitOrderSummary from "../ui/LimitOrderSummary";
@@ -42,7 +41,7 @@ const LimitComponent: React.FC<LimitComponentProps> = ({
   loadingSwap,
 }) => {
   const handleUseMarketClick = () => {
-    console.log("Use Market clicked");
+    // console.log("Use Market clicked");
   };
   const orderDetails = [
     { label: "Sell Order", value: "5 USDC" },

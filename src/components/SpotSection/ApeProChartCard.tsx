@@ -61,7 +61,6 @@ export default function TradingViewChartCard({
       try {
         setLoadingPrice(true);
         const p = await fetchJupiterPrice(baseAddr, quoteAddr);
-        console.log("🚀 ~ doFetchPrice ~ p:", p)
 
         if (typeof p === "number") {
           setPrice(p);

@@ -63,7 +63,7 @@ const TokensPage = () => {
                 const data = await response.json();
                 setTrendingTokens(data.trending);
             } catch (error) {
-                console.error('Error fetching trending tokens:', error);
+                console.log('Error fetching trending tokens:', error);
             }
         };
 
