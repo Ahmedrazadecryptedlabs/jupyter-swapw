@@ -81,65 +81,64 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, onTokenSelect }) => {
         {loading ? (
           <p className="text-center text-gray-400 py-4">Fetching tokens...</p>
         ) : (
-          // <div className="flex-1 ">
-          //   {filteredTokens.length > 0 ? (
-          //     <List
-          //       height={800}
-          //       itemCount={filteredTokens.length}
-          //       itemSize={50}
-          //       width="100%"
-          //       onItemsRendered={({
-          //         visibleStopIndex,
-          //       }: {
-          //         visibleStopIndex: number;
-          //       }) => {
-          //         if (visibleStopIndex === filteredTokens.length - 1) {
-          //           loadMoreTokens();
-          //         }
-          //       }}
-          //     >
-          //       {({
-          //         index,
-          //         style,
-          //       }: {
-          //         index: number;
-          //         style: React.CSSProperties;
-          //       }) => {
-          //         const token = filteredTokens[index];
-          //         return (
-          //           <button
-          //             key={token.address}
-          //             onClick={() => {
-          //               onTokenSelect?.(token);
-          //               onClose();
-          //             }}
-          //             className="w-full flex items-center hover:bg-[#435467] rounded-lg h-12 py-2 px-3 text-left transition"
-          //             style={style}
-          //           >
-          //             <img
-          //               className="w-6 h-6 rounded-full mx-2"
-          //               src={token.logoURI || "/default.png"}
-          //               alt={token.symbol}
-          //             />
-          //             <div className="flex-1 flex flex-col mx-1">
-          //               <span className="text-sm font-bold flex items-center">
-          //                 <span className="mr-2">{token.symbol}</span>
-          //               </span>
-          //               <span className="text-xs text-gray-300">
-          //                 {token.name}
-          //               </span>
-          //             </div>
-          //           </button>
-          //         );
-          //       }}
-          //     </List>
-          //   ) : (
-          //     <p className="text-center text-gray-400 mt-4">
-          //       No tokens found for "{searchQuery}"
-          //     </p>
-          //   )}
-          // </div>
-          <></>
+          <div className="flex-1 ">
+            {filteredTokens.length > 0 ? (
+              <List
+                height={800}
+                itemCount={filteredTokens.length}
+                itemSize={50}
+                width="100%"
+                onItemsRendered={({
+                  visibleStopIndex,
+                }: {
+                  visibleStopIndex: number;
+                }) => {
+                  if (visibleStopIndex === filteredTokens.length - 1) {
+                    loadMoreTokens();
+                  }
+                }}
+              >
+                {({
+                  index,
+                  style,
+                }: {
+                  index: number;
+                  style: React.CSSProperties;
+                }) => {
+                  const token = filteredTokens[index];
+                  return (
+                    <button
+                      key={token.address}
+                      onClick={() => {
+                        onTokenSelect?.(token);
+                        onClose();
+                      }}
+                      className="w-full flex items-center hover:bg-[#435467] rounded-lg h-12 py-2 px-3 text-left transition"
+                      style={style}
+                    >
+                      <img
+                        className="w-6 h-6 rounded-full mx-2"
+                        src={token.logoURI || "/default.png"}
+                        alt={token.symbol}
+                      />
+                      <div className="flex-1 flex flex-col mx-1">
+                        <span className="text-sm font-bold flex items-center">
+                          <span className="mr-2">{token.symbol}</span>
+                        </span>
+                        <span className="text-xs text-gray-300">
+                          {token.name}
+                        </span>
+                      </div>
+                    </button>
+                  );
+                }}
+              </List>
+            ) : (
+              <p className="text-center text-gray-400 mt-4">
+                No tokens found for "{searchQuery}"
+              </p>
+            )}
+          </div>
         )}
       </div>
     </div>
