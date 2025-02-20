@@ -391,7 +391,7 @@ export default function SpotTradeSection() {
             setModalType={setModalType}
             setModalOpen={setModalOpen}
             connected={connected}
-            executeJupiterSwap={() => {}}
+            executeJupiterSwap={() => { }}
             loadingSwap={loadingSwap}
           />
         );
@@ -460,7 +460,7 @@ export default function SpotTradeSection() {
     }
   };
 
-  
+
   /**
    * 14) Define tab states with index signature
    */
@@ -518,8 +518,8 @@ export default function SpotTradeSection() {
             >
               <div className="bg-gray-900 rounded-2xl order-2 overflow-hidden hidden md:block">
                 <TradingViewChartCard
-                  baseToken={sellCurrency}
-                  quoteToken={buyCurrency}
+                  baseToken={sellCurrency ?? undefined}
+                  quoteToken={buyCurrency ?? undefined}
                 />
               </div>
 
@@ -559,9 +559,8 @@ export default function SpotTradeSection() {
         >
           <div className="flex md:flex-row items-center justify-between rounded-full w-full">
             <div
-              className={`flex items-center px-1 space-x-1 justify-evenly bg-[#192230] rounded-full py-1 ${
-                showChart ? "w-full" : "w-full !mr-12"
-              }`}
+              className={`flex items-center px-1 space-x-1 justify-evenly bg-[#192230] rounded-full py-1 ${showChart ? "w-full" : "w-full !mr-12"
+                }`}
             >
               {tabs.map((tab) => (
                 <button
@@ -572,11 +571,10 @@ export default function SpotTradeSection() {
                       setShowChart(true);
                     }
                   }}
-                  className={`w-full py-3 rounded-full text-sm font-bold transition-all ${
-                    activeTab === tab
+                  className={`w-full py-3 rounded-full text-sm font-bold transition-all ${activeTab === tab
                       ? "bg-primary/20 text-primary"
                       : "bg-transparent text-white hover:bg-primary/10 hover:text-gray-200"
-                  }`}
+                    }`}
                 >
                   {tab}
                 </button>
@@ -588,21 +586,19 @@ export default function SpotTradeSection() {
               <div className="flex items-center space-x-1 ml-2">
                 <motion.button
                   onClick={() => setShowChart(!showChart)}
-                  className={`w-11 h-11 flex items-center justify-center rounded-full transition ${
-                    showChart
+                  className={`w-11 h-11 flex items-center justify-center rounded-full transition ${showChart
                       ? "bg-primary/10 text-cyan-400"
                       : "bg-primary-transparent text-white"
-                  }`}
+                    }`}
                 >
                   <AlignHorizontalDistributeCenter size={17} />
                 </motion.button>
                 <motion.button
                   onClick={() => setShowConnectWallet(!showConnectWallet)}
-                  className={`w-11 h-11 flex items-center justify-center rounded-full transition ${
-                    showConnectWallet
+                  className={`w-11 h-11 flex items-center justify-center rounded-full transition ${showConnectWallet
                       ? "bg-primary/10 text-cyan-400"
                       : "bg-primary-transparent text-white"
-                  }`}
+                    }`}
                 >
                   <Clock size={19} />
                 </motion.button>
@@ -612,10 +608,10 @@ export default function SpotTradeSection() {
 
           {showChart && (
             <div className="bg-gray-900 rounded-2xl order-2 overflow-hidden block md:hidden">
-              <TradingViewChartCard
+              {/* <TradingViewChartCard
                 baseToken={sellCurrency}
                 quoteToken={buyCurrency}
-              />
+              /> */}
             </div>
           )}
 
@@ -671,7 +667,6 @@ export default function SpotTradeSection() {
         <Modal
           isOpen={modalOpen}
           onClose={() => setModalOpen(false)}
-          tokenList={tokenList}
           onTokenSelect={handleTokenSelection}
         />
       )}

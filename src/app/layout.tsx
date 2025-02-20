@@ -4,7 +4,6 @@ import "./globals.css";
 import WalletConnecterProvider from "@/context/WalletProvider";
 import { Toaster } from "react-hot-toast"; // Import Toaster
 import { PoolProvider } from "@/context/PoolContext";
-import { LanguageProvider } from "@/context/LanguageContext";
 import { TokenProvider } from "@/context/TokenContext";
 import { SwapProvider } from "@/context/SwapContext"; // Import SwapProvider
 
@@ -29,14 +28,12 @@ export default function RootLayout({
         {/* Wrap the entire application with all providers */}
         <SwapProvider> {/* Add SwapProvider here */}
           <TokenProvider>
-            <LanguageProvider>
-              <PoolProvider>
-                <WalletConnecterProvider>
-                  {children}
-                  <Toaster position="top-right" />
-                </WalletConnecterProvider>
-              </PoolProvider>
-            </LanguageProvider>
+            <PoolProvider>
+              <WalletConnecterProvider>
+                {children}
+                <Toaster position="top-right" />
+              </WalletConnecterProvider>
+            </PoolProvider>
           </TokenProvider>
         </SwapProvider> {/* Close SwapProvider */}
       </body>

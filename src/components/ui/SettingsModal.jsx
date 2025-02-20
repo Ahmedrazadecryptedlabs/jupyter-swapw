@@ -4,12 +4,9 @@ import React, { useState } from "react";
 import { Switch } from "@headlessui/react";
 import { ChevronDown, Info } from "lucide-react";
 import Dropdown from "../Dropdown";
-import { useLanguage } from "@/context/LanguageContext";
-import { useTranslation } from "react-i18next";
+
 
 export default function SettingsModal({ isOpen, onClose }) {
-  const { t } = useTranslation();
-  const { changeLanguage } = useLanguage(); // Use the global language context
 
   const generalOptions = [
     { value: "xray", label: "XRAY" },
@@ -45,7 +42,6 @@ export default function SettingsModal({ isOpen, onClose }) {
   };
   const handleLanguageChange = (option) => {
     setSelectedLanguage(option);
-    changeLanguage(option.value); // Change the global language
   };
   const handleExplorerChange = (option) => {
     console.log("Selected Explorer:", option);

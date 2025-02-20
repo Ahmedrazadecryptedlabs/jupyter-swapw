@@ -60,8 +60,6 @@ export default function TrendingTokensHeader() {
                 <Modal
                     isOpen={modalOpen}
                     onClose={() => setModalOpen(false)}
-                    tokenList={[]} // Pass your token list here
-                    onTokenSelect={(token) => console.log("Selected Token:", token)}
                 />
             )}
         </div>

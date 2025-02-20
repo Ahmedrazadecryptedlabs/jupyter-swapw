@@ -3,6 +3,7 @@ import { Dispatch, SetStateAction } from 'react';
 
 
 
+
 declare global {
   interface Window {
     deBridge?: any; // Declare deBridge as part of the window object
