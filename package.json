@@ -21,34 +21,16 @@
     "@radix-ui/react-toast": "^1.2.6",
     "@radix-ui/react-tooltip": "^1.1.6",
     "@shadcn/ui": "^0.0.4",
-    "@solana/wallet-adapter-backpack": "^0.1.14",
-    "@solana/wallet-adapter-base": "^0.9.23",
-    "@solana/wallet-adapter-coin98": "^0.5.20",
-    "@solana/wallet-adapter-coinbase": "^0.1.19",
-    "@solana/wallet-adapter-ledger": "^0.9.25",
-    "@solana/wallet-adapter-phantom": "^0.9.24",
     "@solana/wallet-adapter-react": "^0.15.35",
     "@solana/wallet-adapter-react-ui": "^0.9.35",
-    "@solana/wallet-adapter-solflare": "^0.6.28",
-    "@solana/wallet-adapter-torus": "^0.11.28",
-    "@solana/wallet-adapter-trezor": "^0.1.2",
-    "@solana/wallet-adapter-trust": "^0.1.13",
-    "@solana/wallet-adapter-walletconnect": "^0.1.16",
     "@solana/wallet-adapter-wallets": "^0.19.32",
+    "@solana/wallet-adapter-base": "^0.9.23",
     "@solana/web3.js": "^1.98.0",
-    "@tanstack/react-query": "^5.64.2",
-    "@tiplink/wallet-adapter": "^2.1.21",
-    "@tiplink/wallet-adapter-react-ui": "^1.0.0",
-    "@wagmi/connectors": "^5.7.5",
-    "@walletconnect/client": "^1.8.0",
-    "@wormhole-foundation/wormhole-connect": "^1.2.0",
     "axios": "^1.7.9",
-    "bs58": "^6.0.0",
     "chart.js": "^4.4.7",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "^11.18.0",
-    "frontier-connect-wallet": "^2.3.2",
     "lightweight-charts": "^5.0.2",
     "lucide": "^0.469.0",
     "lucide-react": "^0.469.0",
@@ -65,9 +47,7 @@
     "recharts": "^2.15.1",
     "tailwind-merge": "^2.6.0",
     "tailwind-scrollbar": "^3.1.0",
-    "tailwindcss-animate": "^1.0.7",
-    "viem": "^2.22.12",
-    "wagmi": "^1.4.13"
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -84,8 +64,5 @@
     "postcss": "^8",
     "tailwindcss": "^3.4.17",
     "typescript": "^5"
-  },
-  "engines": {
-    "node": "22.11.0"
   }
 }
